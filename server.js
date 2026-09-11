@@ -20,7 +20,7 @@ app.post('/pay', async (req, res) => {
             return res.status(500).json({ success: false, message: "Server configuration error: AUTOPAY_SECRET_KEY missing." });
         }
 
-        const response = await fetch('https://autopay.co.ke/api/stk-push', {
+        const response = await fetch('https://autopaydigital.co.ke/api/stk-push', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${SECRET_KEY}`,
@@ -65,7 +65,7 @@ app.post('/callback', async (req, res) => {
             });
         }
 
-        const response = await fetch('https://autopay.co.ke/api/check-status', {
+        const response = await fetch('https://autopaydigital.co.ke.co.ke/api/check-status', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${SECRET_KEY}`,
