@@ -20,7 +20,7 @@ app.post('/pay', async (req, res) => {
             return res.status(500).json({ success: false, message: "Server configuration error: AUTOPAY_SECRET_KEY missing." });
         }
 
-        const response = await fetch('https://api.bossxpay.co.ke/stk-push', {
+        const response = await fetch('https://api.bossxpay.co.ke/api/stk-push', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${SECRET_KEY}`,
